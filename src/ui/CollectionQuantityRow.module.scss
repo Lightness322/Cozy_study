@@ -1,0 +1,28 @@
+.quantity {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  font-weight: 500;
+
+  .total {
+    display: flex;
+    align-items: center;
+  }
+
+  .check_column {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+
+    .check_column_row {
+      display: flex;
+      gap: 4px;
+    }
+  }
+}

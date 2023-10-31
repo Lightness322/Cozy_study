@@ -1,0 +1,52 @@
+.row {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: -10%;
+
+    border: 1px solid var(--main-color);
+  }
+
+  .name {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    margin-bottom: 10px;
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+
+  .confirm {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .row {
+    &::before {
+      display: none;
+    }
+
+    .name {
+      display: none;
+    }
+  }
+}

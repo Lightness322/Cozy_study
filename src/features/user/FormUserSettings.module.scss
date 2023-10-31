@@ -1,0 +1,15 @@
+.buttons {
+  display: flex;
+  gap: 25px;
+}
+
+.edit {
+  width: 65%;
+}
+
+@media (max-width: 700px) {
+  .input {
+    max-width: 100%;
+    text-align: center;
+  }
+}

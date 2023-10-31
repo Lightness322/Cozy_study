@@ -1,0 +1,21 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  button {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+
+  .icon:hover {
+    border-radius: 15px;
+    background-color: #c9c3c3;
+  }
+
+  .number {
+    font-size: 2rem;
+    font-family: "Chivo Mono", monospace;
+  }
+}

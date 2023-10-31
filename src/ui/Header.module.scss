@@ -1,0 +1,121 @@
+.header {
+  position: relative;
+  z-index: 2;
+
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--sub-color);
+  box-shadow: 0px 0px 20px 0px var(--border-color);
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 2rem;
+    font-weight: 600;
+
+    .nav {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+
+      .ul {
+        transition: all 0.3s;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+
+        li {
+          a:hover {
+            color: var(--main-color);
+          }
+        }
+
+        :global(.active) {
+          text-decoration: underline;
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+}
+
+.menu_icon {
+  display: none;
+  height: 24px;
+  width: 30px;
+  margin-right: 20px;
+  margin-left: auto;
+  position: relative;
+  span {
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: calc(50% - 1.5px);
+    left: 0;
+
+    background-color: var(--main-color);
+  }
+  :first-child {
+    top: 1px;
+  }
+  :last-child {
+    top: auto;
+    bottom: 0;
+  }
+
+  &.active {
+    span {
+      display: none;
+      top: calc(50% - 1px);
+    }
+    :first-child {
+      display: inline-block;
+      transform: rotate(-45deg);
+    }
+    :last-child {
+      display: inline-block;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .container {
+      .nav {
+        .ul {
+          width: 250px;
+          position: fixed;
+          top: 68px;
+          right: 0;
+          padding: 20px 60px;
+          transform: translateX(250px);
+
+          flex-direction: column;
+          gap: 25px;
+
+          background-color: var(--sub-color);
+          border-top: 1px solid var(--border-color);
+          border-bottom: 2px solid var(--main-color);
+          border-left: 2px solid var(--main-color);
+          border-bottom-left-radius: 15px;
+          &.active {
+            transform: translateX(0px);
+          }
+        }
+      }
+    }
+  }
+  .menu_icon {
+    display: block;
+  }
+}

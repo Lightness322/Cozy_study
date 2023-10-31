@@ -1,0 +1,54 @@
+.settings_row {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  padding: 20px;
+
+  border-bottom: 2px solid var(--main-color);
+  border-left: 2px solid var(--main-color);
+  border-right: 2px solid var(--main-color);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0px 0px 20px 0px var(--border-color);
+  background-color: var(--sub-color);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+
+  font-weight: 500;
+
+  div:nth-child(2) {
+    flex-direction: row;
+  }
+
+  label {
+    display: flex;
+  }
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  input {
+    width: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .settings_row {
+    div:nth-child(2) {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .settings_row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

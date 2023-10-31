@@ -1,0 +1,42 @@
+.li {
+  width: 250px;
+  min-height: 200px;
+
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px 1px var(--border-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  .top_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .bottom_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .name {
+    flex-grow: 1;
+
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}

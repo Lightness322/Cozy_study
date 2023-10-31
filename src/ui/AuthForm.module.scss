@@ -1,0 +1,35 @@
+.container {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form {
+    width: 100%;
+    max-width: 380px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input {
+      width: 100%;
+      border: 1px solid var(--border-color);
+    }
+
+    label {
+      position: relative;
+    }
+
+    .actions {
+      margin: 0 auto;
+      margin-top: 10px;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+  }
+}
