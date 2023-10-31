@@ -8,7 +8,7 @@ import Logo from "./Logo"
 import User from "../features/user/User"
 import Button from "./Button"
 import Modal from "./Modal"
-import LoginForm from "../features/authentication/LogInForm"
+import LoginForm from "../features/authentication/LoginForm"
 import SignupForm from "../features/authentication/SignupForm"
 
 import styles from "./Header.module.scss"
