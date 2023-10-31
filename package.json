@@ -1,19 +1,23 @@
 {
-  "name": "flash-study",
+  "name": "cozy_study",
   "private": true,
+  "homepage": "https://lightness322.github.io/Cozy_study/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.36.0",
     "@tanstack/react-query": "^4.35.3",
     "@tanstack/react-query-devtools": "^4.35.3",
     "chart.js": "^4.4.0",
+    "gh-pages": "^6.0.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
