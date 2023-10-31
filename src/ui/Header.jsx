@@ -72,7 +72,10 @@ export default function Header({
           <>
             <nav className={styles.nav}>
               <Logo />
-              <ul className={styles.ul} style={{ justifyContent: "end" }}>
+              <ul
+                className={styles.ul_buttons}
+                style={{ justifyContent: "end" }}
+              >
                 <li>
                   <Button look="main" onClick={handleLoginModal}>
                     Login
