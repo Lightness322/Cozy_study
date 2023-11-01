@@ -1,5 +1,6 @@
 .container {
   height: 100%;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
@@ -42,6 +43,26 @@
 
     p {
       font-size: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    .rows {
+      p {
+        font-size: 1.5rem;
+      }
+
+      .row {
+        .title {
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 }

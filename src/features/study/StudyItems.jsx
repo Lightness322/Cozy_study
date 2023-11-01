@@ -50,7 +50,7 @@ export default function StudyItems() {
       {sortedStudyItems.length === 0 && (
         <NoneMessage>There are no collections available for study</NoneMessage>
       )}
-      <ItemsList length={collections.length}>
+      <ItemsList length={collections.length} smallCard={true}>
         {sortedStudyItems?.map((collection) => (
           <StudyItem
             key={collection.id}

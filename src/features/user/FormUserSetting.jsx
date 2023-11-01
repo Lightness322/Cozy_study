@@ -9,7 +9,6 @@ import {
 } from "../../data/formValidations"
 
 import Button from "../../ui/Button"
-import FormUI from "../../ui/FormUI"
 import ValidationError from "../../ui/ValidationError"
 import Spinner from "../../ui/Spinner"
 
@@ -34,7 +33,7 @@ export default function FormUserSetting({
   }
 
   return (
-    <FormUI onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <label>
         <span>Nickname</span>
         <input
@@ -54,7 +53,6 @@ export default function FormUserSetting({
       <label>
         <span>Inactive days</span>
         <input
-          className={styles.input}
           disabled={!isChangeable}
           type="number"
           {...register("inactiveDays", {
@@ -115,6 +113,6 @@ export default function FormUserSetting({
           Cancel
         </Button>
       </div>
-    </FormUI>
+    </form>
   )
 }

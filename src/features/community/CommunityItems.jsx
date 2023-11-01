@@ -58,7 +58,7 @@ export default function CommunityItems() {
           There are no public collections available to add
         </NoneMessage>
       )}
-      <ItemsList>
+      <ItemsList smallCard={true}>
         {sortedPublicCollections?.map((publicCollection) => (
           <CommunityItem
             key={publicCollection.id}

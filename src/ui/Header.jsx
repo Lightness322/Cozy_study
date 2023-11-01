@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useQuery } from "@tanstack/react-query"
 
 import { getCurrentUser } from "../services/apiAuth"
@@ -12,6 +11,7 @@ import LoginForm from "../features/authentication/LoginForm"
 import SignupForm from "../features/authentication/SignupForm"
 
 import styles from "./Header.module.scss"
+import { useOutside } from "../hooks/useOutside"
 
 export default function Header({
   isLoginModalActive,
@@ -19,7 +19,7 @@ export default function Header({
   isSignUpModalActive,
   setIsSignUpModalActive,
 }) {
-  const [isMenuActive, setIsMenuActive] = useState(false)
+  const { refMenu, refBtn, isMenuActive, setIsMenuActive } = useOutside(false)
 
   const { data: user } = useQuery(["currentUser"], getCurrentUser)
 
@@ -43,6 +43,7 @@ export default function Header({
             <nav className={styles.nav}>
               <Logo />
               <button
+                ref={refBtn}
                 className={`${styles.menu_icon} ${
                   isMenuActive ? styles.active : ""
                 }`}
@@ -54,6 +55,7 @@ export default function Header({
               </button>
               <ul
                 className={`${styles.ul} ${isMenuActive ? styles.active : ""}`}
+                ref={refMenu}
               >
                 <li onClick={handleMenu}>
                   <NavLink to="/collections">Collections</NavLink>

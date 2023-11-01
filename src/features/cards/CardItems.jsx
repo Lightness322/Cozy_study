@@ -84,7 +84,7 @@ export default function CardItems() {
           {sortedCards.length === 0 && (
             <NoneMessage>You have not added any cards yet</NoneMessage>
           )}
-          <ItemsList>
+          <ItemsList smallCard={true}>
             {sortedCards?.map((card) => (
               <CardItem
                 card={card}

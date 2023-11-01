@@ -1,4 +1,5 @@
-.ul {
+.ul,
+.ul_small {
   padding-bottom: 20px;
 
   display: grid;
@@ -16,6 +17,14 @@
   }
 }
 
+@media (max-width: 1120px) {
+  .ul_small {
+    max-width: 960px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .ul {
     max-width: 600px;
@@ -23,8 +32,24 @@
   }
 }
 
+@media (max-width: 840px) {
+  .ul_small {
+    max-width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
   .ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .ul_small {
     grid-template-columns: repeat(1, 1fr);
   }
 }
