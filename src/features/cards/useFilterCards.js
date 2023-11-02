@@ -7,7 +7,7 @@ export function useFilterCards() {
   const options = {
     sort: [
       { value: "download_date", label: "Download date" },
-      { value: "name", label: "Name" },
+      { value: "name", label: "Title" },
     ],
     status: [
       { value: "all", label: "All" },

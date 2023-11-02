@@ -12,7 +12,7 @@ export function useFilterCollections(collections) {
     sort: [
       { value: "active_cards", label: "Active cards" },
       { value: "total_cards", label: "Total cards" },
-      { value: "name", label: "Name" },
+      { value: "name", label: "Title" },
       { value: "download_date", label: "Download date" },
     ],
     categories: ["all", ...uniqueCategories],

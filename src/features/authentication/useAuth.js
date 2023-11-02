@@ -16,7 +16,7 @@ export function useAuth(actionFn) {
     },
     onError: (error) => {
       console.log(error)
-      toast.error("There was an error with authentication")
+      toast.error("Incorrect email or password")
     },
   })
 

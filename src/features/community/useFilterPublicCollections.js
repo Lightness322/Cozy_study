@@ -8,7 +8,7 @@ export function useFilterPublicCollections() {
     sort: [
       { value: "rating", label: "Rating" },
       { value: "total_cards", label: "Total cards" },
-      { value: "name", label: "Name" },
+      { value: "name", label: "Title" },
       { value: "download_date", label: "Download date" },
     ],
   }

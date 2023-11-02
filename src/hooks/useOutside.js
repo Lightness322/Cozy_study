@@ -7,7 +7,6 @@ export function useOutside(initialValue) {
   const refBtn = useRef(null)
 
   function handleClickOutside(e) {
-    console.log(e.target.className)
     if (refBtn.current && refBtn.current.contains(e.target)) {
       return null
     }

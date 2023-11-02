@@ -33,6 +33,7 @@
 
     .names {
       width: 100%;
+      text-align: center;
     }
 
     .diagram_container {
@@ -88,7 +89,7 @@
     .row {
       grid-template-columns: 1fr 1fr;
 
-      justify-items: end;
+      // justify-items: end;
 
       .diagram_container {
         display: none;

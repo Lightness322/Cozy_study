@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 
+import { useOutside } from "../hooks/useOutside"
+
 import { getCurrentUser } from "../services/apiAuth"
 
 import { NavLink } from "react-router-dom"
@@ -9,9 +11,9 @@ import Button from "./Button"
 import Modal from "./Modal"
 import LoginForm from "../features/authentication/LoginForm"
 import SignupForm from "../features/authentication/SignupForm"
+import BurgerButton from "./BurgerButton"
 
 import styles from "./Header.module.scss"
-import { useOutside } from "../hooks/useOutside"
 
 export default function Header({
   isLoginModalActive,
@@ -42,17 +44,11 @@ export default function Header({
           <>
             <nav className={styles.nav}>
               <Logo />
-              <button
-                ref={refBtn}
-                className={`${styles.menu_icon} ${
-                  isMenuActive ? styles.active : ""
-                }`}
+              <BurgerButton
+                refBtn={refBtn}
+                isMenuActive={isMenuActive}
                 onClick={handleMenu}
-              >
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
+              />
               <ul
                 className={`${styles.ul} ${isMenuActive ? styles.active : ""}`}
                 ref={refMenu}
