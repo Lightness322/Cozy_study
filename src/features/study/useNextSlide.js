@@ -1,4 +1,4 @@
-export function useNextSlice({
+export function useNextSlide({
   collectionId,
   card,
   cards,

@@ -1,7 +1,7 @@
 import { useSwiper } from "swiper/react"
 
 import { useUpdateCardAndCollection } from "./useUpdateCardAndCollection"
-import { useNextSlice } from "./useNextSlide"
+import { useNextSlide } from "./useNextSlide"
 
 import Button from "../../ui/Button"
 
@@ -12,7 +12,7 @@ export default function Buttons({ ...props }) {
 
   const { updateCard } = useUpdateCardAndCollection({})
 
-  const { handleSlideRepeat, handleSlideConfirm } = useNextSlice({
+  const { handleSlideRepeat, handleSlideConfirm } = useNextSlide({
     ...props,
     swiper,
     updateCard,

@@ -2,7 +2,7 @@ const collectionNameQty = 30
 const collectionCategoryQty = 24
 const collectionDescQty = 300
 const cardQuestionQty = 40
-const cardAnswerQty = 1000
+const cardAnswerQty = 2000
 const usernameQty = 24
 
 const minInactiveDays = 1

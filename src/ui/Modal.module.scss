@@ -24,7 +24,8 @@
   .content {
     min-height: 500px;
     min-width: 700px;
-    padding: 50px 50px;
+    max-width: 80%;
+    padding: 50px;
 
     border: 2px solid var(--main-color);
     border-radius: 12px;
@@ -38,6 +39,14 @@
     &.small {
       min-height: auto;
       height: max-content;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .modal {
+    .content {
+      max-width: 100%;
     }
   }
 }

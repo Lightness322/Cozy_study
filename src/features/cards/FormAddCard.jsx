@@ -56,6 +56,9 @@ export default function FormAddCard({
             },
           })}
         ></textarea>
+        {errors?.answer && (
+          <ValidationError>{errors.answer.message}</ValidationError>
+        )}
       </label>
       <div className={styles.buttons}>
         <Button look="main">
