@@ -2,6 +2,7 @@ import {
   collectionCategoryQty,
   collectionDescQty,
   collectionNameQty,
+  descRowsQty,
 } from "../data/formValidations"
 
 import ValidationError from "./ValidationError"
@@ -24,7 +25,7 @@ export default function FormFields({
   return (
     <>
       <label>
-        <span>Title</span>
+        <span>Name</span>
         <input
           {...register("name", {
             required: "This field is required!",
@@ -79,7 +80,7 @@ export default function FormFields({
       <label>
         <span>Description</span>
         <textarea
-          rows={3}
+          rows={descRowsQty}
           {...register("description", {
             maxLength: {
               value: collectionDescQty,

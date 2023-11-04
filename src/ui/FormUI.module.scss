@@ -8,13 +8,14 @@
   gap: 30px;
 
   label {
-    width: 65%;
+    width: 100%;
     position: relative;
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(100px, max-content) 1fr;
+    column-gap: 30px;
 
-    text-align: end;
+    text-align: start;
   }
 
   span {
@@ -25,23 +26,23 @@
     font-size: 1.8rem;
   }
 
+  textarea {
+    width: 100%;
+  }
+
   input,
   textarea {
-    margin-left: 20px;
     &:disabled {
       border: none;
     }
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 550px) {
   .form {
-    gap: 15px;
-
     label {
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
+      grid-template-columns: 1fr;
+      row-gap: 10px;
     }
   }
 }

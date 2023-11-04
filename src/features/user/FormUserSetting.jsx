@@ -34,7 +34,7 @@ export default function FormUserSetting({
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-      <label>
+      <label className={isChangeable ? `${styles.changeable}` : ""}>
         <span>Nickname</span>
         <input
           disabled={!isChangeable}
@@ -50,7 +50,7 @@ export default function FormUserSetting({
           <ValidationError>{errors.nickname.message}</ValidationError>
         )}
       </label>
-      <label>
+      <label className={isChangeable ? `${styles.changeable}` : ""}>
         <span>Inactive days</span>
         <input
           disabled={!isChangeable}
@@ -74,7 +74,7 @@ export default function FormUserSetting({
           <ValidationError>{errors.inactiveDays.message}</ValidationError>
         )}
       </label>
-      <label>
+      <label className={isChangeable ? `${styles.changeable}` : ""}>
         <span>Email</span>
         <input
           disabled={!isChangeable}
@@ -90,16 +90,6 @@ export default function FormUserSetting({
           <ValidationError>{errors.email.message}</ValidationError>
         )}
       </label>
-      <div className={styles.edit}>
-        <Button
-          disabled={isChangeable}
-          look="additional"
-          type="button"
-          onClick={handleChange}
-        >
-          Edit
-        </Button>
-      </div>
       <div className={styles.buttons}>
         <Button look="main" disabled={!isChangeable}>
           {isUpdating ? <Spinner inButton={true} /> : "Save"}
@@ -111,6 +101,16 @@ export default function FormUserSetting({
           onClick={handleIsModalActive}
         >
           Cancel
+        </Button>
+      </div>
+      <div className={styles.edit}>
+        <Button
+          disabled={isChangeable}
+          look="additional"
+          type="button"
+          onClick={handleChange}
+        >
+          Edit
         </Button>
       </div>
     </form>

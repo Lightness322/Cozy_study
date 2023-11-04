@@ -14,7 +14,7 @@ html {
 body {
   background-color: var(--bg-color);
 
-  font-family: "Poppins";
+  font-family: "Noto sans", sans-serif;
   font-size: 1.6rem;
 }
 

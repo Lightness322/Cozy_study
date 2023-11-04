@@ -44,6 +44,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 
     .question {
       font-size: 2rem;
@@ -52,8 +53,12 @@
 
     .answer {
       flex: 1 0 auto;
-      display: flex;
-      align-items: center;
+
+      text-align: start;
     }
   }
+}
+
+.text {
+  display: inline;
 }

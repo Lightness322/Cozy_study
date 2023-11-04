@@ -63,7 +63,7 @@ export default function CardItem({ card, deleteCard, isDeletingCard, cards }) {
           handleDeleteModalActive={handleDeleteModalActive}
         />
       </Modal>
-      <Modal small={true} isModalActive={isUpdateModalActive}>
+      <Modal isModalActive={isUpdateModalActive}>
         <UpdateCardForm
           isUpdateModalActive={isUpdateModalActive}
           handleUpdateModalActive={handleUpdateModalActive}

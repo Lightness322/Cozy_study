@@ -3,7 +3,11 @@ import { useEffect } from "react"
 import { useUpdateCardAndCollection } from "../study/useUpdateCardAndCollection"
 import { useSubmitUpdateCardForm } from "./useSubmitUpdateCardForm"
 
-import { cardAnswerQty, cardQuestionQty } from "../../data/formValidations"
+import {
+  answerRowsQty,
+  cardAnswerQty,
+  cardQuestionQty,
+} from "../../data/formValidations"
 
 import Button from "../../ui/Button"
 import FormUI from "../../ui/FormUI"
@@ -55,6 +59,7 @@ export default function UpdateCardForm({
       <label>
         <span>Answer</span>
         <textarea
+          rows={answerRowsQty}
           {...register("answer", {
             maxLength: {
               value: cardAnswerQty,

@@ -39,14 +39,14 @@ export function sortAndFilterCards(cards, isReversed, searchParams) {
     )
   }
 
-  if (sort_by === "download_date" || sort_by === null) {
+  if (sort_by === "name" || sort_by === null) {
+    sortedAndFilteredArray.sort((a, b) => (a.question > b.question ? 1 : -1))
+  }
+
+  if (sort_by === "download_date") {
     sortedAndFilteredArray.sort((a, b) =>
       new Date(a.createdAt).getTime() > new Date(b.createdAt).getTime() ? -1 : 1
     )
-  }
-
-  if (sort_by === "question") {
-    sortedAndFilteredArray.sort((a, b) => (a.question > b.question ? 1 : -1))
   }
 
   isReversed && sortedAndFilteredArray.reverse()

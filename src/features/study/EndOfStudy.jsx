@@ -26,7 +26,11 @@ export default function EndOfStudy({ toRepeat, toWaiting, toLearned }) {
                 <PiCheckFatLight size={25} color="#808080" />
               </span>
             </div>
-            <p>{toRepeat.current.join(", ")}</p>
+            <div className={styles.questions}>
+              {toRepeat.current.map((question, index) => (
+                <p key={index}>{question}</p>
+              ))}
+            </div>
           </div>
         )}
         {toWaiting.current.length > 0 && (
@@ -41,7 +45,11 @@ export default function EndOfStudy({ toRepeat, toWaiting, toLearned }) {
                 <TbClockFilled size={25} color="#297cbc" />
               </span>
             </div>
-            <p>{toWaiting.current.join(", ")}</p>
+            <div className={styles.questions}>
+              {toWaiting.current.map((question, index) => (
+                <p key={index}>{question}</p>
+              ))}
+            </div>
           </div>
         )}
         {toLearned.current.length > 0 && (
@@ -55,7 +63,11 @@ export default function EndOfStudy({ toRepeat, toWaiting, toLearned }) {
                 <PiCheckFatFill size={25} color="green" />
               </span>
             </div>
-            <p>{toLearned.current.join(", ")}</p>
+            <div className={styles.questions}>
+              {toLearned.current.map((question, index) => (
+                <p key={index}>{question}</p>
+              ))}
+            </div>
           </div>
         )}
       </div>

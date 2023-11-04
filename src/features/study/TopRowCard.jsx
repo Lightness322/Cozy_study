@@ -10,6 +10,8 @@ export default function TopRowCard({ card }) {
 
   const { answer, learnedTimes } = card
 
+  const formatAnswerArr = answer.split("\n")
+
   return (
     <>
       <div className={styles.top_row}>
@@ -26,9 +28,19 @@ export default function TopRowCard({ card }) {
         )}
         <LearnedStatusIcon learnedTimes={learnedTimes} />
       </div>
-      <div>
+      <div className={styles.text}>
         {isShowAnswer ? (
-          <span>{card.answer}</span>
+          formatAnswerArr.map((subString, index) => {
+            if (index === formatAnswerArr.length - 1) {
+              return <span key={index}>{subString}</span>
+            }
+            return (
+              <span key={index}>
+                {subString}
+                <br />
+              </span>
+            )
+          })
         ) : (
           <span className={styles.question}>{card.question}</span>
         )}

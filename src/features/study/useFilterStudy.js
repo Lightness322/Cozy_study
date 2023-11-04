@@ -11,7 +11,7 @@ export function useFilterStudy(collections) {
   const options = {
     sort: [
       { value: "active_cards", label: "Active cards" },
-      { value: "name", label: "Title" },
+      { value: "name", label: "Name" },
       { value: "download_date", label: "Download date" },
     ],
     categories: ["all", ...uniqueCategories],

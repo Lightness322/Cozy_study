@@ -1,7 +1,11 @@
 import { useAddCard } from "./useAddCard"
 import { useSubmitAddCardForm } from "./useSubmitAddCardForm"
 
-import { cardAnswerQty, cardQuestionQty } from "../../data/formValidations"
+import {
+  answerRowsQty,
+  cardAnswerQty,
+  cardQuestionQty,
+} from "../../data/formValidations"
 
 import FormUI from "../../ui/FormUI"
 import Button from "../../ui/Button"
@@ -44,7 +48,7 @@ export default function FormAddCard({
       <label>
         <span>Answer</span>
         <textarea
-          rows={4}
+          rows={answerRowsQty}
           {...register("answer", {
             maxLength: {
               value: cardAnswerQty,
