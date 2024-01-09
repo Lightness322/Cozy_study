@@ -12,8 +12,13 @@ export function sortAndFilterCollections(
 
   if ((category !== "all" || status === null) && category !== null) {
     sortedAndFilteredArray = sortedAndFilteredArray.filter(
-      (collection) => collection.category === category
+      (collection) =>
+        collection.category.toLowerCase() === category.toLowerCase()
     )
+  }
+
+  if (category === "all") {
+    sortedAndFilteredArray = [...collections]
   }
 
   if (status === "active") {

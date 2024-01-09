@@ -57,7 +57,7 @@ export default function Intro() {
               <img src={question} />
             </li>
             <li>
-              <p>
+              <p className={styles.last_paragraph}>
                 We also offer the opportunity to share your sets of flash cards
                 with other users. You can upload your collections to our
                 platform and download collections from other users on the
@@ -66,13 +66,6 @@ export default function Intro() {
               </p>
             </li>
           </ul>
-          {!user?.user && (
-            <div className={styles.button}>
-              <Button look="main" onClick={() => setIsSignUpModalActive(true)}>
-                Get started
-              </Button>
-            </div>
-          )}
         </div>
       </div>
     </>

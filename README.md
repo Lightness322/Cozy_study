@@ -1,8 +1,31 @@
-# React + Vite
+## Описание проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Cozy Study** - это сайт предназначенный для обучения и запоминания информации с помощью флеш-карточек.
 
-Currently, two official plugins are available:
+### В проекте реализовано:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Аутентификация и авторизация, валидация данных, введенных пользователем.
+- Взаимодействие с API Supabase.
+- Адаптивная верстка.
+- Страницы "Collections", "Study", "Community". На каждой странице имеется поиск, сортировка и фильтрация.
+- На странице "Collections" можно создавать свои собственные коллекции флеш-карточек, на каждой карточке может быть размещено название и ответ на "обратной стороне". Своей коллекцией можно поделиться с другими пользователями.
+- На странице "Study" можно тренировать свои флеш-карточки. После того, как карточка отмечена как "изучена", она будет недоступна для тренировки в течении нескольких дней (этот параметр можно редактировать).
+- На странице "Community" можно увидеть, оценить и добавить к себе коллекции, которыми поделились другие пользователи.
+
+## Используемые технологи
+
+- Фреймворк: React + JavaScript
+
+- Управление состоянием: React Query
+
+- CSS: CSS Modules
+
+- База данных: Supabase
+
+_[Посмотреть сайт на netlify](https://cozy-study.netlify.app/)_
+
+Данные для входа установлены по умолчанию:
+
+Почта: test@mail.ru
+
+Пароль: test11

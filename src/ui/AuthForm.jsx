@@ -13,7 +13,10 @@ export default function AuthForm({ onSubmit, handleModal, isLoading, type }) {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ mode: "onBlur" })
+  } = useForm({
+    mode: "onBlur",
+    defaultValues: { email: "test@mail.ru", password: "test11" },
+  })
 
   return (
     <div className={styles.container}>
